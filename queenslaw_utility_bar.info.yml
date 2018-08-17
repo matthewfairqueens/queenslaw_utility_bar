@@ -1,0 +1,5 @@
+name: "Queen's University Faculty of Law Utility bar"
+type: module
+description: "Queen's University utility bar functionality for Faculty of Law websites."
+package: "Queen's University Faculty of Law"
+core: 8.x

@@ -1,0 +1,5 @@
+<?php
+function _queenslaw_utility_bar_content() {
+  $markup = file_get_contents('https://www.queensu.ca/resources/php/queenswebheader.php');
+  return $markup;
+}
