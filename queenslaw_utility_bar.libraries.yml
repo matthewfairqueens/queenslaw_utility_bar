@@ -9,7 +9,6 @@ queenslaw-utility-bar:
     theme:
       https://www.queensu.ca/style/css/queensweb/queenswebheader.css: { type: external }
   js:
-    https://www.queensu.ca/style/javascript/queensweb/queensheader.js: { type: external }
     https://www.queensu.ca/style/javascript/queensweb/queenswebheader.js: { type: external }
   dependencies:
     - core/jquery
