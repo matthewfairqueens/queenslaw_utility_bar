@@ -1,6 +1,18 @@
 <?php
 function _queenslaw_utility_bar_content() {
-  ini_set('default_socket_timeout', 1);
-  $markup = file_get_contents('https://www.queensu.ca/resources/php/queenswebheader.php');
-  return $markup;
+	$context = stream_context_create(
+		array(
+			'http' => array(
+				'timeout' => 1
+			)
+		)
+	);
+	$markup = file_get_contents('https://www.queensu.ca/resources/php/queenswebheader.php',0,$context);
+	if ($markup == '') {
+		$markup = file_get_contents('sites/default/files/cachedquheader.html');
+	} else {
+		file_put_contents('sites/default/files/cachedquheader.html', $markup);
+	}
+	return $markup;
+	// https://www.queensu.ca/resources/php/queenswebheader.php
 }
