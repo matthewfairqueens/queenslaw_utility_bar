@@ -1,5 +1,6 @@
 <?php
 function _queenslaw_utility_bar_content() {
+  ini_set('default_socket_timeout', 1);
   $markup = file_get_contents('https://www.queensu.ca/resources/php/queenswebheader.php');
   return $markup;
 }
